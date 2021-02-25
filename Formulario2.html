@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="=Descripcion" content="Mi primer formulario">
+    <meta name="author" content="Raffaella Pagano">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+
+    <h1>Formulario 2</h1>
+
+    <form action="#" method="GET" enctype="multipart/form-data" autocoplete = "off"> 
+
+        <p> <!--Deben tener el mismo nome sino no hacen parte de la misma seleccion
+        solo se puede elegir uno-->
+
+            <input type="radio" name="experiencia" value="Junior" checked>Junior <br />
+            <input type="radio" name="experiencia" value="Senior">Senior <br />
+            <input type="radio" name="experiencia" value="SemiSenior">SemiSenior <br />
+            <input type="radio" name="experiencia" value="Ninguna">Ninguna <br />
+        </p>
+
+        <p> <!--Puedo seleccionar las 5 se envia con un &-->
+            <input type="checkbox" name="futbol" value="futbol"> Futbol
+            <br>
+            <input type="checkbox" name="basket" checked> Basket
+            <br>
+            <input type="checkbox" name="beisbol"> Beisbol
+            <br>
+            <input type="checkbox" name="otro"> Otro
+            <br>
+        </p>
+
+        <p><!--Puedo elegir con multiple se la seleccion es multiple o omitirlo y que 
+        solo se puede elegir uno-->
+            <select multiple size="2"><!--2 se refiera a las elecciones visibles-->
+                <option>Azul</option>
+                <option selected>Rojo</option>
+                <option>Gris</option>
+            </select>
+        </p>
+
+        <p>
+            <label>Buscador</label> <!--autocompleta mietras escribo la opción-->
+            <input list="buscar">
+            <datalist id="buscar">
+                <option>Azul</option>
+                <option>Rojo</option>
+                <option>Gris</option>
+            </datalist>
+        </p>
+
+        <p>
+            <input type="file" name="archivo" accept=".pdf, imagen/*" multiple>
+            <!--solo pdf y cualquier formato dee imagenes, multiple sino solo deja 
+            cargar uno. OJO poner arriba después del GET el enctype, sino el archivo 
+            no se cargará-->
+            <input type="hidden" name="oculto" value="oculto">
+            <input type="text" name="oculto" value="oculto" readonly>
+            <input type="text" name="oculto" value="desabilito" disabled>
+        </p>
+
+        <p>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar</button>
+        </p>
+
+    </form>
+    
+</body>
+</html>
